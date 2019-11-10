@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg width="112px" height="112px" viewBox="0 0 112 112" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6 (26304) - http://www.bohemiancoding.com/sketch -->
+    <title>bell</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="3.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Wireframes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.1-Initial" transform="translate(-514.000000, -1012.000000)">
+            <g id="bell" transform="translate(522.000000, 1018.000000)">
+                <circle id="Base-Circle-Copy-5" stroke="#FFFFFF" stroke-width="2" fill="#005189" filter="url(#filter-1)" cx="48" cy="48" r="48"/>
+                <g id="noun_10289" transform="translate(19.500000, 18.750000)" fill="#FFFFFF">
+                    <g id="Group">
+                        <g>
+                            <path d="M55.1627589,43.2339768 C54.9259558,43.2057424 51.2484385,42.9816316 51.2484385,38.9485192 L51.2484385,39.2017468 C48.8000002,13.1166592 35.7404843,6.49127281 28.3368521,6.49127281 C20.9349871,6.49127281 7.5423564,13.3037123 5.30156261,38.9485192 L5.30156261,38.9485192 C5.30156261,38.9485192 4.50102665,43.1519205 1.38812581,43.2339768 C1.12481487,43.334562 0,43.6063184 0,44.998629 L0,48.5279332 C0,48.5279332 17.00918,46.7632811 28.2750006,46.7632811 C39.5408211,46.7632811 56.5500011,48.5279332 56.5500011,48.5279332 L56.5500011,44.998629 C56.5500011,43.7854306 55.804248,43.3169155 55.1627589,43.2339768 L55.1627589,43.2339768 Z" id="Shape"/>
+                            <ellipse id="Oval" cx="28.2750006" cy="4.41163029" rx="4.03890711" ry="4.03311241"/>
+                        </g>
+                        <path d="M28.2750006,59.2420185 C32.7415671,59.2420185 36.3536984,55.5865417 36.3536984,51.1749114 C36.3536984,51.1749114 34.0183601,50.2925853 28.2750006,50.2925853 C22.5316411,50.2925853 20.1963028,51.1749114 20.1963028,51.1749114 C20.1963028,55.5865417 23.8093177,59.2420185 28.2750006,59.2420185 L28.2750006,59.2420185 Z" id="Shape"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

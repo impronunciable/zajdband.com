@@ -1,0 +1,171 @@
+#webpush-subscription {
+  font-family: sans-serif;
+  font-size: medium;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+
+#webpush-subscription .subscribe {
+  float: right;
+  width: 64px;
+  height: 64px;
+  margin: 5px;
+  padding: 0;
+  background-color: transparent;
+  background-image: url(https://zajdband.com/wp-content/uploads/wpservefile_files/bell.svg);
+  background-size: cover;
+  transition-duration: 500ms;
+  transition-property: width, height, opacity;
+  pointer-events: auto;
+}
+
+#webpush-subscription.interacted .subscribe {
+  width: 48px;
+  height: 48px;
+  opacity: 0.5;
+}
+
+#webpush-subscription .dialog {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 15px 20px;
+  background-color: #fff;
+  border-top: 1px solid #BBB;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 600ms;
+  transform: translateY(100%);
+  pointer-events: auto;
+}
+
+#webpush-subscription .dialog.shown {
+  transform: translateY(0);
+}
+
+#webpush-subscription .dialog .close {
+  float: right;
+  color: #333;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  margin-left: 5px;
+  margin-top: 0;
+  background-color: transparent;
+  background-image: url(https://zajdband.com/wp-content/plugins/web-push/lib/close.svg);
+  background-size: cover;
+}
+
+#webpush-subscription .dialog button {
+  border-radius: 0;
+}
+
+#webpush-subscription .message {
+  min-height: 40px;
+  padding-left: 2.5em;
+  background-image: url(https://zajdband.com/wp-content/uploads/wpservefile_files/bell.svg);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 36px 36px;
+}
+
+#webpush-subscription .message p {
+  line-height: 140%;
+}
+
+#webpush-subscription .actions {
+  align-self: flex-end;
+}
+
+#webpush-subscription button {
+  margin: 0;
+  margin-top: 10px;
+  padding: 8px 25px;
+  padding-top: 12px;
+  color: #005189;
+  line-height: normal;
+  background-color: transparent;
+  text-transform: uppercase;
+  outline: 0;
+}
+
+#webpush-subscription .default {
+  color: #fff;
+  background-color: #005189;
+  border-radius: 6px;
+  box-shadow: #BBB 0 2px 0;
+}
+
+#webpush-subscription .unsubscribe {
+  width: 100%;
+}
+
+#webpush-subscription .bubble {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  right: calc(64px + 10px + 10px);
+  max-width: 300px;
+  min-height: 54px;
+  padding: 12px 15px 10px 15px;
+  background-color: #fff;
+  border: 1px solid #444;
+  border-radius: 7px;
+  box-shadow: rgba(0,0,0,0.3) 0 0 20px -3px;
+  opacity: 0.0;
+  transition-duration: 500ms;
+  transition-property: opacity, right;
+}
+
+#webpush-subscription .notification-image {
+  margin-top: 10px;
+}
+
+#webpush-subscription .bubble.shown {
+  opacity: 1.0;
+  pointer-events: auto;
+}
+
+#webpush-subscription.interacted .bubble {
+  right: calc(48px + 10px + 10px);
+}
+
+#webpush-subscription .bubble:after,
+#webpush-subscription .bubble:before {
+  position: absolute;
+  left: 100%;
+  bottom: 15px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  border-width: 9px;
+  transition: bottom 500ms;
+}
+
+#webpush-subscription.interacted .bubble:after,
+#webpush-subscription.interacted .bubble:before {
+  bottom: 10px;
+}
+
+#webpush-subscription .bubble:after {
+  border-left-color: #ffffff;
+  left: calc(100% - 1px);
+}
+
+#webpush-subscription .bubble:before {
+  border-left-color: #222;
+}
+
+#webpush-subscription .bubble p {
+  margin: 0;
+}
+
