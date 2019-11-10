@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Quick VR generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <style>
+      body {
+        padding-top: 10px
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Quick VR Generator</h1>
+        <p>Quick VR is a web Virtual Reality Scene generator using Google Spreadsheets for configuration</p>
+      </div>
+      <h2>Usage</h2>
+      <ol>
+        <li>Create a Google Spreadsheet. You can use <a target="_blank" href="https://drive.google.com/previewtemplate?id=1ClUuMrxLfTiq-n58qT2FBJHXweKF3xItd-Cw5YqunN8&mode=public">a simple template</a></li>
+        <li><a target="_blank" href="https://support.google.com/docs/answer/37579?hl=en&ref_topic=2818999">Publish it for the web</a></li>
+        <li>Paste the url you get here <input type="text" id="spreadsheeturl" /> and hit <button id="submit" class="btn btn-xs btn-primary">submit</button></li>
+        <li>
+          you can:
+          <ul>
+            <li>Share your scene link: <a target="_blank" id="link" href="#">...</a></li>
+            <li>place an iframe in your website <input type="text" id="iframe"></li>
+          </ul>
+        </li>
+      </ol>
+
+      <h2>Examples</h2>
+      <p>Most examples are taken from the <a target="_blank" href="https://github.com/povdocs/webvr-starter-kit">webvr-starter-kit</a> repo.</p>
+      <ul>
+        <li><a target="_blank" href="http://zajdband.com/quick-vr/#1ClUuMrxLfTiq-n58qT2FBJHXweKF3xItd-Cw5YqunN8">Simple scene</a></li>
+        <li><a target="_blank" href="http://zajdband.com/quick-vr/#1z_V3-zZzyIyiMv92RtHi3WA8WWLNYWrxAxUNZL6kPaM">Panorama</a></li>
+        <li><a target="_blank" href="http://zajdband.com/quick-vr/#1xHK5u7qfFtonVi4OwaMYjYr26w0vIv6pUaoMVA9ibhU">3D video sphere</a></li>
+      </ul>
+
+      <h2>Docs (WIP)</h2>
+
+      <h3>Intro</h3>
+      <p>This tool is just a simple wrapper for <a target="_blank" href="https://github.com/povdocs/webvr-starter-kit">webvr-starter-kit</a>. You can read the webvr-starter-kit for more examples and usage.</p>
+
+      <h3>Objects</h3>
+      <p>All properties from <a target="_blank" href="https://github.com/povdocs/webvr-starter-kit#objects">webvr objects</a> are allowed.</p>
+
+      <h2>Credits</h2>
+      Quick VR is based on this two amazing libraries:
+      <ul>
+        <li><a target="_blank" href="https://github.com/jsoma/tabletop">Tabletop</a></li>
+        <li><a target="_blank" href="https://github.com/povdocs/webvr-starter-kit">webvr-starter-kit</a></li>
+      </ul>
+
+      <h2>License</h2>
+      <h1>The MIT License (MIT)</h1>
+      <p>Copyright © 2015 <a href="http://zajdband.com">Dan Zajdband, http://zajdband.com</a></p>
+
+      <p>Permission is hereby granted, free of charge, to any person obtaining a copy
+      of this software and associated documentation files (the “Software”), to deal
+      in the Software without restriction, including without limitation the rights
+      to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+      copies of the Software, and to permit persons to whom the Software is
+      furnished to do so, subject to the following conditions:</p>
+
+      <p>The above copyright notice and this permission notice shall be included in
+      all copies or substantial portions of the Software.</p>
+
+      <p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+      IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+      FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+      AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+      LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+      OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+      THE SOFTWARE.</p>
+
+    </div>
+    <script>
+      var link = document.getElementById('link')
+      var iframe = document.getElementById('iframe')
+      var input = document.getElementById('spreadsheeturl')
+      document.getElementById('submit').addEventListener('click', function() {
+        var url = 'http://zajdband.com/quick-vr#' + input.value
+        link.href = url
+        link.innerHTML = url
+        iframe.value = '<iframe src="' + url + '" frameborder="0" height="100%" width="100%"></iframe>'
+      })
+    </script>
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-29730613-1', 'zajdband.com');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

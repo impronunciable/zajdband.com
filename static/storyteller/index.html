@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+
+    <title>InVR</title>
+    <style>
+
+      html, body, .container {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        background: #000;
+        font-family: 'Fira Sans';
+        color: rgb(192, 193, 194);
+        text-align: center;
+        font-size: 18px;
+      }
+
+      p, a.start {
+        font-weight: 100;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        display: flex;
+        height: 70vh;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .title {
+        padding: 0px 50px;
+      }
+
+      .title h1 {
+        color: #fff;
+        font-family: 'Shrikhand', cursive;
+        font-size: 72px;
+        margin-bottom: 0px;
+        margin-top: 10px;
+      }
+
+      .title p {
+        margin-top: 10px;
+      }
+
+      .start {
+        display: none;
+        border: 2px solid #fff;
+        text-decoration: none;
+        color: rgb(191, 192, 193);
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>Storyteller</h1>
+        <p>Tell your story and watch it come to life in virtual reality</p>
+      </div>
+      <a href='vr.html' class='start'>Go to the experience</a>
+      <div class="mic">
+        <img src="microphone.svg" alt="microphone" height="50" />
+        <p>Give your browser access to your microphone to begin</p>
+      </div>
+    </div>
+    <script src="gum.js"></script>
+    <script>
+    navigator.getUserMedia ({audio: true}, function(localMediaStream) {
+        document.querySelector('.start').style.display = 'inline-block'
+    },function(err) {
+      alert('You need to provide access to your mic in order to use this experience')
+    });
+    </script>
+	</body>
+</html>
