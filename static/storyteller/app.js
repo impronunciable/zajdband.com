@@ -19,11 +19,11 @@ var micWorks = setTimeout(function () {
 
 var commands = {
 	'Hi there': onStart,
-	'go to :tag': onPanoramaQuery,
-	'travel to :tag': onPanoramaQuery,
-	'visit :tag': onPanoramaQuery,
-	'explore :tag': onPanoramaQuery,
-	'see :tag': onPanoramaQuery,
+	'go to *tag': onPanoramaQuery,
+	'travel to *tag': onPanoramaQuery,
+	'visit *tag': onPanoramaQuery,
+	'explore *tag': onPanoramaQuery,
+	'see *tag': onPanoramaQuery,
 }
 
 function fadeOutAudio () {
@@ -41,6 +41,7 @@ function fadeOutAudio () {
 }
 
 function onPanoramaQuery (tag) {
+	console.log('tag', tag)
 	var loader = document.querySelector('#loader')
 	$pano.emit('fadeOut')
 	setMainText(tag)
@@ -95,7 +96,7 @@ var oldText = ''
 
 function setMainText (str) {
 	oldText = str
-  $txt.setAttribute('bmfont-text', 'text: ' + str + '; align: center; width: 1000; color: white; fnt: font.fnt; fntImage: font.png;')
+  $txt.setAttribute('value', str)
 }
 
 function askForFeedback () {

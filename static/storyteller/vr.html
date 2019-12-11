@@ -3,9 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>InVR</title>
-    <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-template-component@^3.1.1/dist/aframe-template-component.min.js"></script>
-    <script src="https://rawgit.com/bryik/aframe-bmfont-text-component/master/dist/aframe-bmfont-text-component.min.js"></script>
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="https://rawgit.com/ngokevin/kframe/master/components/sun-sky/dist/aframe-sun-sky.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
     <script src="loader.js" charset="utf-8"></script>
@@ -31,8 +29,8 @@
 				<!--a-entity id="sky" geometry="primitive:sphere; radius:30; phiLength:360; phiStart:0; thetaLength:90" material="shader:flat; side:back; height:2048; src:#skymap; width:2048" position="0 -3 0"></a-entity-->
         <!--a-entity id="ground" geometry="primitive: circle; radius: 12;" rotation="-90 0 0" material="shader: flat; src: #floor"></a-entity-->
       <!--/a-entity-->
-      <a-entity id="text" bmfont-text="text: Let's make sure your mic is working. Say &#34;Hi there&#34;; color: white; align: center; width: 1000; fnt: font.fnt; fntImage: font.png;"  position="-2.4 1.5 -2"></a-entity>
-      <a-entity id="listening" visible="false" bmfont-text="text: Listening...; color: white; align: center; width: 1000; fnt: font.fnt; fntImage: font.png;"  position="-2.4 .5 -2"></a-entity>
+      <a-text id="text" value="Let's make sure your mic is working. Say &#34;Hi there&#34;" color="white" align="center" width="20" font="font.fnt" font-image="font.png"  position="0 1.5 -10"></a-text>
+      <a-text id="listening" visible="false" value="Listening..." color="white" align="center" width="20" fnt="font.fnt" fntImage="font.png"  position="0 .5 -10"></a-text>
       <a-plane visible="false" id="loader" position="0 .5 -3" color="transparent" scale="1 1 1" canvas-material="width:128;height:128"/>
 
     </a-scene>
