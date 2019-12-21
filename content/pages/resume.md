@@ -55,6 +55,7 @@ My skills include both Front end and Back end software development, allowing me
   * [From Mobile First to Offline First](http://schedule.sxsw.com/events/PP60232) at SXSW 2017
   * [WebVR at Nardoz 2017](https://www.youtube.com/watch?v=ThDZpLolIFI)
   * [Next.js 2 at Meetup.js 2017](https://www.youtube.com/watch?v=QxRaTHuRLGg)
+  * [The future of the JAMstack at BackendlessConf 2019](https://www.youtube.com/watch?v=qJxy2LR0kAI)
 
 ## In the media
 
