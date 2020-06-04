@@ -157,7 +157,7 @@ El resultado para las 3 personas que fueron pasadas por esta técnica son las si
 
 ![](/masabeu.png)
 
-![](/_lapoll.png)
+![](/lapoll.png)
 
 
 ### Técnica 2
