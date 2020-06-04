@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dan Zajdband]]></title><description><![CDATA[JavaScript mutant ninja turtle]]></description><link>https://zajdband.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 04 Jun 2020 00:15:23 GMT</lastBuildDate><item><title><![CDATA[Relaciodan #1: A través del algoritmo]]></title><description><![CDATA[La pandemia nos privó de muchas cosas pero también trae nuevas oportunidades. Desde hace un poco más de un mes tuve la oportunidad de sumarme a una serie de dinámicas o ejericios organizados por la Escuela Relacional. Siendo Relacional una escuela de Dirección de Arte y yo un programador sin background en lo visual me interesó el desafío doble que tengo por delante.]]></description><link>https://zajdband.com/relaciodan-1-a-traves-del-algoritmo/</link><guid isPermaLink="false">https://zajdband.com/relaciodan-1-a-traves-del-algoritmo/</guid><pubDate>Tue, 02 Jun 2020 21:23:35 GMT</pubDate><content:encoded>&lt;p&gt;La pandemia nos privó de muchas cosas pero también trae nuevas oportunidades.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dan Zajdband]]></title><description><![CDATA[JavaScript mutant ninja turtle]]></description><link>https://zajdband.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 04 Jun 2020 00:17:03 GMT</lastBuildDate><item><title><![CDATA[Relaciodan #1: A través del algoritmo]]></title><description><![CDATA[La pandemia nos privó de muchas cosas pero también trae nuevas oportunidades. Desde hace un poco más de un mes tuve la oportunidad de sumarme a una serie de dinámicas o ejericios organizados por la Escuela Relacional. Siendo Relacional una escuela de Dirección de Arte y yo un programador sin background en lo visual me interesó el desafío doble que tengo por delante.]]></description><link>https://zajdband.com/relaciodan-1-a-traves-del-algoritmo/</link><guid isPermaLink="false">https://zajdband.com/relaciodan-1-a-traves-del-algoritmo/</guid><pubDate>Tue, 02 Jun 2020 21:23:35 GMT</pubDate><content:encoded>&lt;p&gt;La pandemia nos privó de muchas cosas pero también trae nuevas oportunidades.
 Desde hace un poco más de un mes tuve la oportunidad de sumarme a una serie de
 dinámicas o ejericios organizados por la &lt;a href=&quot;https://www.instagram.com/escuela.relacional/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Escuela Relacional&lt;/a&gt;.
 Siendo Relacional una escuela de Dirección de Arte y yo un programador sin background en lo visual
@@ -201,7 +201,7 @@ hice un dibujo (con mi técnica super pulida) imaginando las situaciones a trav�
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/8a6360f2a26ed7600595114c9566da6c/d3b8a/_lapoll.png&quot;
+    href=&quot;/static/8a6360f2a26ed7600595114c9566da6c/d3b8a/lapoll.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -212,24 +212,24 @@ hice un dibujo (con mi técnica super pulida) imaginando las situaciones a trav�
   &gt;&lt;/span&gt;
   &lt;picture&gt;
         &lt;source
-          srcset=&quot;/static/8a6360f2a26ed7600595114c9566da6c/01472/_lapoll.webp 240w,
-/static/8a6360f2a26ed7600595114c9566da6c/222bd/_lapoll.webp 480w,
-/static/8a6360f2a26ed7600595114c9566da6c/3a1b5/_lapoll.webp 922w&quot;
+          srcset=&quot;/static/8a6360f2a26ed7600595114c9566da6c/01472/lapoll.webp 240w,
+/static/8a6360f2a26ed7600595114c9566da6c/222bd/lapoll.webp 480w,
+/static/8a6360f2a26ed7600595114c9566da6c/3a1b5/lapoll.webp 922w&quot;
           sizes=&quot;(max-width: 922px) 100vw, 922px&quot;
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/8a6360f2a26ed7600595114c9566da6c/0783d/_lapoll.png 240w,
-/static/8a6360f2a26ed7600595114c9566da6c/782f4/_lapoll.png 480w,
-/static/8a6360f2a26ed7600595114c9566da6c/d3b8a/_lapoll.png 922w&quot;
+          srcset=&quot;/static/8a6360f2a26ed7600595114c9566da6c/0783d/lapoll.png 240w,
+/static/8a6360f2a26ed7600595114c9566da6c/782f4/lapoll.png 480w,
+/static/8a6360f2a26ed7600595114c9566da6c/d3b8a/lapoll.png 922w&quot;
           sizes=&quot;(max-width: 922px) 100vw, 922px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/8a6360f2a26ed7600595114c9566da6c/d3b8a/_lapoll.png&quot;
-          alt=&quot; lapoll&quot;
-          title=&quot; lapoll&quot;
+          src=&quot;/static/8a6360f2a26ed7600595114c9566da6c/d3b8a/lapoll.png&quot;
+          alt=&quot;lapoll&quot;
+          title=&quot;lapoll&quot;
           loading=&quot;lazy&quot;
         /&gt;
       &lt;/picture&gt;
