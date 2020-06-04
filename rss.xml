@@ -1,4 +1,575 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dan Zajdband]]></title><description><![CDATA[JavaScript mutant ninja turtle]]></description><link>https://zajdband.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 27 May 2020 23:44:17 GMT</lastBuildDate><item><title><![CDATA[Nowhere to SSH: my journey into the Serverless world]]></title><description><![CDATA[I migrated a small real-world app from Express + MongoDB to Now + Firebase. I'm happy I was able to do it in ~10 hours and I don&#8217;t need to maintain or spend money on servers (at least for now).]]></description><link>https://zajdband.com/nowhere-to-ssh-my-journey-into-the-serverless-world/</link><guid isPermaLink="false">https://zajdband.com/nowhere-to-ssh-my-journey-into-the-serverless-world/</guid><pubDate>Wed, 09 Oct 2019 21:23:35 GMT</pubDate><content:encoded>&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dan Zajdband]]></title><description><![CDATA[JavaScript mutant ninja turtle]]></description><link>https://zajdband.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 04 Jun 2020 00:13:07 GMT</lastBuildDate><item><title><![CDATA[Relaciodan #1: A través del algoritmo]]></title><description><![CDATA[La pandemia nos privó de muchas cosas pero también trae nuevas oportunidades. Desde hace un poco más de un mes tuve la oportunidad de sumarme a una serie de dinámicas o ejericios organizados por la Escuela Relacional. Siendo Relacional una escuela de Dirección de Arte y yo un programador sin background en lo visual me interesó el desafío doble que tengo por delante.]]></description><link>https://zajdband.com/relaciodan-1-a-traves-del-algoritmo/</link><guid isPermaLink="false">https://zajdband.com/relaciodan-1-a-traves-del-algoritmo/</guid><pubDate>Tue, 02 Jun 2020 21:23:35 GMT</pubDate><content:encoded>&lt;p&gt;La pandemia nos privó de muchas cosas pero también trae nuevas oportunidades.
+Desde hace un poco más de un mes tuve la oportunidad de sumarme a una serie de
+dinámicas o ejericios organizados por la &lt;a href=&quot;https://www.instagram.com/escuela.relacional/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Escuela Relacional&lt;/a&gt;.
+Siendo Relacional una escuela de Dirección de Arte y yo un programador sin background en lo visual
+me interesó el desafío doble que tengo por delante.&lt;/p&gt;
+&lt;p&gt;La idea detrás de la serie de artículos que empiezan con este es contar como los encaro
+desde mi perspectiva como programador, haciendo especial hincapié en el aspecto técnico
+de la resolución de cada dinámica.&lt;/p&gt;
+&lt;p&gt;Cada ejercicio finaliza con una mesa de trabajo donde se dialoga sobre lo trabajado que
+por motivos varios van a quedar por fuera de esta serie.&lt;/p&gt;
+&lt;h2 id=&quot;la-primera-dinámica-el-registro&quot;&gt;&lt;a href=&quot;#la-primera-din%C3%A1mica-el-registro&quot; aria-label=&quot;la primera dinámica el registro permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;La primera dinámica: el registro&lt;/h2&gt;
+&lt;h3 id=&quot;la-previa&quot;&gt;&lt;a href=&quot;#la-previa&quot; aria-label=&quot;la previa permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;La previa&lt;/h3&gt;
+&lt;p&gt;Para empezar, nos pidieron que entreguemos un registro propio que conste de:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Nombre&lt;/li&gt;
+&lt;li&gt;Una foto nuestra&lt;/li&gt;
+&lt;li&gt;Cuenta de instagram&lt;/li&gt;
+&lt;li&gt;Mapa (así, bien libre)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Por ejemplo, esta fue mi entrega:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dan Zajdband&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://instagram.com/danzajdband&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;@danzajdband&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Buenos Aires&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&quot;https://zajdband.com/photo.jpg&quot; alt=&quot;Foto&quot; width=&quot;200&quot;&gt;
+&lt;h3 id=&quot;el-registro-del-otro&quot;&gt;&lt;a href=&quot;#el-registro-del-otro&quot; aria-label=&quot;el registro del otro permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;El registro del otro&lt;/h3&gt;
+&lt;p&gt;Para la primera dinámica se nos envió un documento con el registro de todos los
+participantes (más de 40 personas) y nos pidieron que hagamos un registro de 10 de ellas.&lt;/p&gt;
+&lt;p&gt;Para esta consigna decidí aplicar algoritmos computacionales similares a los
+utilizados por las redes sociales para comprender el contenido que publicamos
+cotidianamente en ellas y así ayudar a identificar la disonancia entre nuestra
+fantasía respecto a lo que realmente las máquinas logran captar.&lt;/p&gt;
+&lt;h3 id=&quot;la-elección-de-los-registros&quot;&gt;&lt;a href=&quot;#la-elecci%C3%B3n-de-los-registros&quot; aria-label=&quot;la elección de los registros permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;La elección de los registros&lt;/h3&gt;
+&lt;p&gt;La primera decisión que tomé fue que yo no iba a elegir las personas a registrar sino que lo iba
+a hacer la computadora. Para esto creé un archivo plano &lt;code class=&quot;language-text&quot;&gt;usuarios.txt&lt;/code&gt; con una cuenta de instagram por línea
+y corrí el siguiente comando en la terminal para que se genere un nuevo archivo con 10 cuentas al azar:&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ cat usuarios.txt | sort -R | head -n10 &amp;gt; elegidos.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Una vez obtenidos los 10 elegidos (y sin mirar el resultado para no hacer trampa) pasé a la primera técnica
+para hacer mis registros asistidos por computadora.&lt;/p&gt;
+&lt;h3 id=&quot;técnica-1&quot;&gt;&lt;a href=&quot;#t%C3%A9cnica-1&quot; aria-label=&quot;técnica 1 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Técnica 1&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Sin que yo pueda verlo, un algoritmo descarga una imagen de una cuenta de instagram,
+la observa y genera una descripción corta de la misma.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt; Luego de recolectar las frases, sin haberlas yo visto y sin saber de quienes son
+hago un dibujo de cada descripción. Finalmente presento la descripción automática
+junto al dibujo y la imagen original.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;el-día-que-tu-ai-lo-entienda&quot;&gt;&lt;a href=&quot;#el-d%C3%ADa-que-tu-ai-lo-entienda&quot; aria-label=&quot;el día que tu ai lo entienda permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;El día que tu AI lo entienda…&lt;/h4&gt;
+&lt;p&gt;El primer paso fue entonces seleccionar una imagen al azar de cada una de las cuentas de Instagram
+de estas personas. Para esto usé &lt;a href=&quot;https://instaloader.github.io/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;InstaLoader&lt;/a&gt; que nos permite
+descargar media y metadata de cuentas de instagram desde un CLI. A partir de esta herramienta generé el siguiente
+script:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token assign-left variable&quot;&gt;ITER&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token for-or-select variable&quot;&gt;INSTAGRAM&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;cat&lt;/span&gt; elegidos.txt&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+&lt;span class=&quot;token assign-left variable&quot;&gt;ITER&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;expr&lt;/span&gt; $ITER + &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Starting &lt;span class=&quot;token variable&quot;&gt;${ITER}&lt;/span&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;token assign-left variable&quot;&gt;PROFILE_DIR&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;instagram/&lt;span class=&quot;token variable&quot;&gt;${INSTAGRAM}&lt;/span&gt;&quot;&lt;/span&gt;
+instaloader &lt;span class=&quot;token variable&quot;&gt;${INSTAGRAM}&lt;/span&gt; --dirname-pattern&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;${PROFILE_DIR}&lt;/span&gt;&quot;&lt;/span&gt; --post-filter&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;date_utc &gt;= datetime(2019, 4, 30)&quot;&lt;/span&gt; --no-captions --no-videos &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; /dev/null
+&lt;span class=&quot;token keyword&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;El script de bash itera sobre la lista de elegidos y ejecuta &lt;code class=&quot;language-text&quot;&gt;instaloader&lt;/code&gt; por cada uno de ellos trayendo fotos del último año.
+Decidí esto para no traer un registro demasiado antiguo y porque mucha gente tiene una actividad agitada en la red.
+Las imagenes de cada usuario van a parar a la carpeta &lt;code class=&quot;language-text&quot;&gt;instagram/elusuario&lt;/code&gt;. Una vez que descargué todo esto me avoqué a la tarea que más intriga me daba, la de extraer descripciónes de las imágenes.&lt;/p&gt;
+&lt;p&gt;Después de probar muchos proyectos, pelearme con pytorch, tensorflow y otros, me decidí por usar &lt;a href=&quot;https://github.com/jmrf/im2txt-demo&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;IM2TXT&lt;/a&gt;
+que es una implementación del modelo propuesto en el paper &lt;a href=&quot;http://arxiv.org/abs/1609.06647&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Show and Tell: Lessons learned from the 2015 MSCOCO Image Captioning Challenge&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Luego de instalar dependencias y el modelo pre-entrenado, armé un script que:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Por cada usuario de la lista de &lt;code class=&quot;language-text&quot;&gt;elegidos&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Elige una imagen al azar de la carpeta de imágenes descargadas.&lt;/li&gt;
+&lt;li&gt;Copia la imagen original a otra carpeta para poder más tarde producir la entrega (sin verla en el momento)&lt;/li&gt;
+&lt;li&gt;Corre el modelo de captioning (descripción) de la imagen elegida.&lt;/li&gt;
+&lt;li&gt;Escupe la descripción en un archivo de descripciones.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;El script me quedó así:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token assign-left variable&quot;&gt;CHECKPOINT_PATH&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;model/train&quot;&lt;/span&gt;
+&lt;span class=&quot;token assign-left variable&quot;&gt;VOCAB_FILE&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;data/mscoco/word_counts.txt&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; pics
+
+&lt;span class=&quot;token assign-left variable&quot;&gt;ITER&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token for-or-select variable&quot;&gt;INSTAGRAM&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;cat&lt;/span&gt; elegidos.txt&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+
+&lt;span class=&quot;token assign-left variable&quot;&gt;ITER&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;expr&lt;/span&gt; $ITER + &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Starting &lt;span class=&quot;token variable&quot;&gt;${ITER}&lt;/span&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token assign-left variable&quot;&gt;PROFILE_DIR&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;instagram/&lt;span class=&quot;token variable&quot;&gt;${INSTAGRAM}&lt;/span&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token assign-left variable&quot;&gt;IMAGE&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;ls&lt;/span&gt; -1 $PROFILE_DIR &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;sort&lt;/span&gt; -R &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;head&lt;/span&gt; -n1&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token function&quot;&gt;cp&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;${PROFILE_DIR}&lt;/span&gt;/&lt;span class=&quot;token variable&quot;&gt;${IMAGE}&lt;/span&gt;&quot;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;pics/&lt;span class=&quot;token variable&quot;&gt;${ITER}&lt;/span&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; im2txt
+bazel build -c opt //im2txt:run_inference &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; /dev/null
+&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;
+
+
+&lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;${ITER}&lt;/span&gt;&lt;span class=&quot;token entity&quot; title=&quot;\n&quot;&gt;\n&lt;/span&gt;&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt; descripciones.txt
+bazel-bin/im2txt/run_inference &lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;
+  --checkpoint_path&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;${CHECKPOINT_PATH}&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;
+  --vocab_file&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;${VOCAB_FILE}&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;
+  --input_files&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;${PROFILE_DIR}&lt;/span&gt;/&lt;span class=&quot;token variable&quot;&gt;${IMAGE}&lt;/span&gt;&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;head&lt;/span&gt; -n2 &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;0)&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt; descripciones.txt 
+
+&lt;span class=&quot;token keyword&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;a-dibujar&quot;&gt;&lt;a href=&quot;#a-dibujar&quot; aria-label=&quot;a dibujar permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;A dibujar&lt;/h4&gt;
+&lt;p&gt;Abriendo el archivo &lt;code class=&quot;language-text&quot;&gt;descripciones.txt&lt;/code&gt; leí las 3 descripciones que infirió el modelo sobre las imágenes que vio
+hice un dibujo (con mi técnica super pulida) imaginando las situaciones a través del texto.&lt;/p&gt;
+&lt;p&gt;El resultado para las 3 personas que fueron pasadas por esta técnica son las siguientes:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 872px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/19d2ce2494cf1bca2954fd15a7d6f00c/27d9c/oskritzel.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 144.95412844036696%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAdCAYAAACqhkzFAAAACXBIWXMAABYlAAAWJQFJUiTwAAAE6klEQVRIx5WW60/TVxjH/RO2xcQ4zcy2jEy3uMQ3ezH3wsxsyYxL5uYW4y7OC6g4QcE1K1S5iS3lXqBVSqXw64VSri1ydU5dUBAK0ivIVVS8Jkt2efvZ+f2kXqBG9uLJ6XnO+X3O833Oc87pssD4LMHQJMHIFMGwaEen8U/ewj/x/ywweVtplwXDU4xeHSY8HCYyECDkHyM4PUdw6s4LLRDDF4Uu88vkmTn800/NF5lkSEQ8GJ5gMDSh9BWfiH4w/Lj1iXG5lefJv59EGJDJ8xZdpW9klH4Rae9wiN6hkNK/OhLhWuAGV66HuRYcV3xyX54n/14MFI6o81kpoZiyb79YchT0LDAwKedp7qnJ/YW+hWOTd+YjfAYUXeV6ZBxfMMJgICLaUYYjN4TvBkOhMWGjyphPtHJ/WMyVx66PTT4fYRQYnL5LW5OE/XQuUmUekllPtUlLTaWeels5bqmMeqkcl1SB3aLHZi2iwV7GhR6v8m1MoMddTY1Bg7u2GHPpcdKPJXBSvR/pTC6NkgGv+yzNdVXUWQ3YKnNxW/Pp6mx5MfC3NjuuKhFhbQW15Zk4ilU4DWocVTqaHGU02Ay4HeUCahSLn8HjquB8tyc2MCScdc5KHJXZeBzFOIwZSAUCWJYuFjlJi70Qj7MIqUwjVKRjM2YilWvobKsnOHNvMTAsnOWmIoyFajrrS7GbstBrDmPITaXRqqXVno/HpkezaysZ+7eTlfQj2tTdtDXXEZq5/zxwRJzrsdkH2GwmLMYs2uzFWEo0lAmYMU9FvUVEKOXhteVjyDhERU4Sxen7seiS6TnnWgyM5rCn3YlHwJqsek4XqCnOTqEkJ0VIzqalNo92ZyFtdSU0i3zWlKZxrq6Aq72doi5j5FAu1ktd9SK6IpHHk5wpTKdCr8YkwC5LrpBcQIerhHMij01SPpJJQ6ukpfdye+xN8YuKP++tpdGShVVsRIVORbk2FVPeMdyWHJprTonF9HS5CnGfzabKoKKpOpPei14C0ws2JTAP/P28l7ZGCy2i3hqdZhocZlEmZtpbaujy2rjQ6eJidz0dzdVijpnuViv9/X8o6mKe5Ym7fzLz8B/Fbj76V7GZR3L/b6Ye/KVIkz+WW7nMgvNnOuZZlstGW1RKfOIhEpOPcuBwsmIHk44qdkT1KwOh8fkbZnbRrb24bG49ZNu33/Dqa6+wavVqlq9YwfKVK1m15g1WrnqduLXvinsyLBa+G/MZWAQcnb3P7oR9rHlzDXHvv8fmbZ+zfd8O1n+4gbfi4li/YYNyyUaBC1MWM8If9uzmnbVvs/GzjXSI3esbvsQnX2xi3Qfr+HjTR/T5R5XcvRQo5yRy8z57Ew+yY+dW9h7YSaPXhbvVQXxSAskphzgQ/x2XB/1i3r2lRRgRklPUKjZ/upEvv96CLkdNVoaKxKSfiU/4iSNJ+8RbIkc4t1TJDziWrmbrV1tI06TS3eHF09KATncCk/EUlUatuK3HlFJZguRbysSmZgdOu4nSUj3uBhfdPZ2cyExjz97v+UV1GF94fOlAOdmdXa1otRqOZ6RhrbFgt9dgKM0nPS2V+PhdQvLY0iQ/vm3maPU0UajLwlCow2yuwO2spspYTLvbglN/QjxI009OxkuByqsnJPlGQvQPBej1+RnwR7giHv2+4QADvhHlv09g4nZM4H8ahElftGzj9wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/19d2ce2494cf1bca2954fd15a7d6f00c/01472/oskritzel.webp 240w,
+/static/19d2ce2494cf1bca2954fd15a7d6f00c/222bd/oskritzel.webp 480w,
+/static/19d2ce2494cf1bca2954fd15a7d6f00c/d1d7c/oskritzel.webp 872w&quot;
+          sizes=&quot;(max-width: 872px) 100vw, 872px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/19d2ce2494cf1bca2954fd15a7d6f00c/0783d/oskritzel.png 240w,
+/static/19d2ce2494cf1bca2954fd15a7d6f00c/782f4/oskritzel.png 480w,
+/static/19d2ce2494cf1bca2954fd15a7d6f00c/27d9c/oskritzel.png 872w&quot;
+          sizes=&quot;(max-width: 872px) 100vw, 872px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/19d2ce2494cf1bca2954fd15a7d6f00c/27d9c/oskritzel.png&quot;
+          alt=&quot;oskritzel&quot;
+          title=&quot;oskritzel&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 836px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/012330d9e4509076cf88de45adf814b2/b9380/masabeu.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 152.1531100478469%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAACXBIWXMAABYlAAAWJQFJUiTwAAAD0ElEQVRIx6WU7VMaVxTG/Rf7uc2HfKxtnSRVR62JmBmDJNZXGCRWnNDYMZMJRo02TrGJsUZ5f9ldFuQdFFE0KakS3vTpuRcwpNIEWmYezr13d397nrvnnhYxEIfPKsBnlyA7vBB3YhAjSUgkb3QfEqk6L2u/Zly+RwwnIYR2Ke6hRaA/IZaCQBeEysMugjrkMMweP6xSAE5/FHY5BIcvApsUpHmEr9m8IZgFP1w0ZjAGbREZuaLqWxjMIu5gw+bBa6fEH9x2+2AVAzT3cih7EVv7wy7ATtc/AGlQqyqUiVumjNn4Q9z/yK5M7tj4wnI9ILvBlziEL35QFh+XxSBCxU2t6mZYhdnIjmnDjN83rVgjmXi0cG05xYt7a91U9RHQE0zAt3uExaUFdF+7iv7e6xjo64Dydg/FTnR//y20mrELi58FCgSUE2ksryxisK8N6mEFRpXd0FBcmJvEk4caPH/2+KJMGgPG01hdXYGipw1Dg73Qjig4WK8dhEGnwvLCL7y0GgOGEvDGDvHypQnjqi5M/NiH+yO9mJ5Q4MHkHegpLhp/bt7yi7VfMdp5BU+mB6C9146h7quYVd/E0twYns5OwhNIXCqxT2a48coEvfI7TCqvY+peJ0b7WjGuaIWu/2vMTQ3RfXuNAyUCbr1eh1E/QHa7MTvSBcNYD8b6v4Gq9QsYDeP00oNmLB/ht5WnGO74Eg80tzCtuoH7ymv4icDGmTuY1argpobSWIYMSHW4+mwew+1fwaC5Cf1oF3R3b0A90IZHOgUeapRw78SbsXzALT+euk3APhjUtzAz/gO0d9sx0XEF84YJspy6dOz+BVi+6PaHYfOIMDsFWFxlWd00tznglHyXjl7tuH634Z0kRftJzaBG8m4aEjULsdJ56tm+BHTTPsZTxygUi8hSTZ6Gkjilo5YlsTGLWeo6hXwBqTcZfv4/DaSi3Uu/BfuVAkmUXGGceUhCBCWKJXcIJTkBnJ/jOHPCE/hshruHZWDeG0fetoPTNTtOnpuRd+wg7wyiQOs4O8dR5q/GgHsVYEGMIrvmwPHMEtLqR8gsvML7bRl5Wi8DT5oD5snmyco2MsYXeKubx7v5deQ2RRR5hmdNACt7WJBiyJrseLe8icycidv+X8BiYA/5LS9OVy14v+5CziIjtyXxrWjOchUYTKLoifAPU3SHUaQtYPOiTBmW/kOGJQYkUMEV5CpSyXBJ0eYs7x6+wTn7KHSu8/4Ecv44cr4Yj3kmKvBzyjD9ZwNlw46Sl46WP54qK3FQX3RNjiYbaw4seoL/VOLSWr3m8Dc65ikCz9o+CQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/012330d9e4509076cf88de45adf814b2/01472/masabeu.webp 240w,
+/static/012330d9e4509076cf88de45adf814b2/222bd/masabeu.webp 480w,
+/static/012330d9e4509076cf88de45adf814b2/5499a/masabeu.webp 836w&quot;
+          sizes=&quot;(max-width: 836px) 100vw, 836px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/012330d9e4509076cf88de45adf814b2/0783d/masabeu.png 240w,
+/static/012330d9e4509076cf88de45adf814b2/782f4/masabeu.png 480w,
+/static/012330d9e4509076cf88de45adf814b2/b9380/masabeu.png 836w&quot;
+          sizes=&quot;(max-width: 836px) 100vw, 836px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/012330d9e4509076cf88de45adf814b2/b9380/masabeu.png&quot;
+          alt=&quot;masabeu&quot;
+          title=&quot;masabeu&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 922px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8a6360f2a26ed7600595114c9566da6c/d3b8a/_lapoll.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 136.00867678958787%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAbCAYAAAB836/YAAAACXBIWXMAABYlAAAWJQFJUiTwAAAERUlEQVRIx5WUZ1MbVxSG+Yv5lHzNZCYZT8ax4xDigGkGIRnR1FFZ1CtqoI6EEKjQDEjaIgjYFFly7PyIN0crJIvm8uGdc3fv3mffe865t4978w4Cf4ZauQb++Bzs2wa4bxRLjM64TwQKbyBwp+BOr0Rg64OOuFvP7Ju6GKtndVTo+1bs/aZPBJw327qeKB3x2NyrYGPnUBwXDjhsV2ooHvLI7R4h/7qKncqxGPdaRnqBLYc3RJM71WMRUDoSsLVfxS570lXhkEORfnLb2SfgrVy0xJPbjoRWpDlR543u+0/br99ITd99yRUu/oVw+eGOeHrPd+auPnbF03Nnbd+dSlF0B7wwMGowZp0YzTYDrA4jnC4GLo8Vbo8ZUb9VVGzZglwmBu78lsNe2xG/CR7jJFz6CTgXxxFckiLimEXEOYu4VwGHcgiqwZ9gmHgMRvIbVu3qbhr67uulRMgGr1EKv3UGduUIjPOj8Jlk8Ogn6f0kgswUTNJnsM4+h0U+gFWn7n5guyANmLWvMPjr99BPD0At7cfU+O/wMTIklzXIhPSI2Gdglv8Jj3YMbuULJHxG2nLz4S37aAszI49gUw7Doh4DM/c3wlY5wvYFRF0qrAd1sM3+Bbd6BAHDBFKBpeu19xSl1V9hrwEa6VNYFoYR8phgM6kIpMB6SIe0X4tMcBEx6yssyf6ASfIEUafm4RxWT+sIehZhmOmHlfIXoMo6GAUSXiUSLjmiHh1SXjWyfiW5ewmGfhxxqh+ucut8htw6mAhoV40jEXbD79Ah4ZlH0iahfBlElxsBNeJUeefC889XudX5HsscFiYeQSvvh1kvg2Z2CHH7FDKuKaR8WqR9GmQ9csTMEjimnyK8NPNwDsU+TMbgCToRii4jsOqDP+xFPruCUi6CUj6NYj6L4kYUxWwEG3EfSlvp9trek9ILrtFROq7/h2M6VrXLj2LkLz6AE9U+ftz1s3DZnmPvnOXrPhQouUJ1H1srFhRJO3E38iEG2RUbyrsFsHsl8Puk2kkbcta5HG6d5Q6wdtFAbT+DBDOBFc0g1pfaMUF9+HojhmohA76QBs8LdIe+7667k8NeoLAdQcYiQ3pJgrRxFGkaZ90K7BOwUsyCa0F5vgvsTdkNYJV0fNkEV4oia5tGzjJFDieRM5O8GnIYRyWfAZtfA8dxXwa2LNcuKI+75NAmR4YZx5qWtm2RYicVxOFmCmWqMkviuK9y2CCHVzhIqhBbHEVKP4SEqh8FKk65uIEyASvfBDx7h5N6EwfxBQRkvyBtGsM6FSfnnMNuOoxygaDUc5XCGljKIUdA9vNAclhvoJxSIzL/BGnDC9IwUjq6bdQDSDsVOOhsm/sqYNvhYWQWQcmPSKqeIaF4jLD8Z7jGfoBv+DusMS9xtBkHy7JfBoqNfdFE9aCEwloI29Qme5tJbOeS4nh7fYViFJXKEdh/3lJjN+8A/wcluvu9hrAHfQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/8a6360f2a26ed7600595114c9566da6c/01472/_lapoll.webp 240w,
+/static/8a6360f2a26ed7600595114c9566da6c/222bd/_lapoll.webp 480w,
+/static/8a6360f2a26ed7600595114c9566da6c/3a1b5/_lapoll.webp 922w&quot;
+          sizes=&quot;(max-width: 922px) 100vw, 922px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/8a6360f2a26ed7600595114c9566da6c/0783d/_lapoll.png 240w,
+/static/8a6360f2a26ed7600595114c9566da6c/782f4/_lapoll.png 480w,
+/static/8a6360f2a26ed7600595114c9566da6c/d3b8a/_lapoll.png 922w&quot;
+          sizes=&quot;(max-width: 922px) 100vw, 922px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/8a6360f2a26ed7600595114c9566da6c/d3b8a/_lapoll.png&quot;
+          alt=&quot; lapoll&quot;
+          title=&quot; lapoll&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;técnica-2&quot;&gt;&lt;a href=&quot;#t%C3%A9cnica-2&quot; aria-label=&quot;técnica 2 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Técnica 2&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt; Elijo manualmente 9 imágenes consecutivas de una cuenta de instagram y genero una descripción corta.
+Luego paso las mismas imágenes
+por un algoritmo que retorna descripciones automáticas de estas.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt; Presento en cada retrato las 9 imágenes junto a las descripciones manuales y
+automáticas.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Para esta segunda técnica usé un script muy similar al de la técnica anterior:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Elijo las siguientes 3 cuentas de instagram de los &lt;code class=&quot;language-text&quot;&gt;elegidos&lt;/code&gt; y por cada una:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Selecciono 9 imágenes al azar.&lt;/li&gt;
+&lt;li&gt;Las paso por el modelo de captioning automático.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Por otro lado, entré a la carpeta de imágenes seleccionadas por el script y escribí yo descripciones
+para esas imágenes.&lt;/p&gt;
+&lt;p&gt;Lo interesante de esta técnica es primero ver como el algoritmo tiene su propio bias y encuentra
+cosas muy distintas a las que nosotros vemos. En conversaciones posteriores me comentó mucha gente
+como se quedaban buscando elementos de la descripción del algoritmo en las imágenes.&lt;/p&gt;
+&lt;p&gt;El resultado para les 3 afortunades fue el siguiente:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/de5985cfc1c2500721d616f59bf49901/9e57d/romi_alvarez.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 101.4446227929374%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAABYlAAAWJQFJUiTwAAAEKElEQVQ4yz1Va28bRRT1H+A/8GpVWpAoAkElIgWJglCjgqiQEBJ8C+rDQrxaRJWWirRFIJWoEY+ogSTUNE1aUdSQKgTHdfz22uvd9a7Xu+u3ncZ2SiqVX3C499rOh/HYc+feOefcM2Of1+rALtWgJrKw8i4s3YFZaqLY6CCcUrEWTyMYS8FwazBKLVjVeyjUNuE22jI4P19uUawpMV+720Vo6SZO+z9EJK4gFElDc2oob/6LHya+xQvP7Mb777yJUDSBdcWQJKu6Acf1UChYKBQdhNMaxXQ5yGc5FVz65jwCU5eRtRwohTLMygbcjfv4buwTPOLz4ZUDzyOZM2WdC+YJjaIouLG4gAsXL0K1K9C9eq+gTR+8gWe73haqHHCaXUz/NInRD97F6VOfQy2UKNaVgiZRVHUTS3dWcPnHn2Uv5wplnYrliCIPPoXpGl5DggYhYn10+q331/gwnjX6bZQaO7m8TxAaqgVFsyWBkbK4EuQk0ixJMbVYobWe6BYjob3ZlIaU6SJNjeQ8lkMKlghupf0ATmsLNtEVyn34br1DzXkgg9eZliCkZI/olymvdG9b1ncoL4eiuP7HbSTVPLJ2GYrlCRreEFE0/LUawq3lv2U9Y5Wgu3UUmx2sk6WW/wljJRwXyhlqpiCcng3gwEsv4ujRY7hDxdfiGdGRhT7u/wjP7X8WQ0NDWPhzmXyZE2ns+iaOnziBkZFDODd+AVHVxGo01UM4d20Re5/ag4MHX8MamZtPYx1dkmDk8FvYs3sXRkdHBYnG6Ihqhjq+d98+7HryCXw5dga5YlV0FoQpo4glgn5jaUWa4ZH/OMDjytzvmAnMI7geF1sxaokRkl8DC5glMJF0Tg4ZxHzcftWpilXS1LUYwefvHGRLZcm0vJ7UizIPrpjedwObmkHxEMpKxsDdWBqhpIpo1qREW6gxolRaR5xsldAKlOBIsknXzqJiCdIzbXo7dFWapaDjtQgy2WJjW+i6rfs9C5A1ms0t1LoPUd16KJoKLbYOIXM9coLQbMv6DmU1F4cZu4pMMkSvSg7xnNXvZBuTV2Ywc/UajXmRgpEyejG4V4HtleHWWoKeJZGCv01N4Nh7T2Py0se4dTuIJGnBtmEjv/7GITz+2KMYHh6mLidwl2jKU8XXzjBwfvxrlKp1kiqPCEknBcNklemZOQSDqzC9GlHq3QhG8unJL8hOr+Jl8qFGjWNTM3VG+v3EBI4ceRuB+QWh23vWWEPSrbr1Hz1X27DohMGd5IJnzo3D7/fjs5On4DY7ohcflqPi1xdvYuzsV5j6ZVau7eBp82l0uWMEl7vLpma6/Dyx+GvU+ZV1eljpAWVteTBlPpitxl3n4qwhm10K2lZZXg+zD5lNa/XNq6UN8RfrmqW7qtHfAMcstwEtk0eeLMSHD9Axs/8BVDkvLjDVQfYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/de5985cfc1c2500721d616f59bf49901/01472/romi_alvarez.webp 240w,
+/static/de5985cfc1c2500721d616f59bf49901/222bd/romi_alvarez.webp 480w,
+/static/de5985cfc1c2500721d616f59bf49901/620b9/romi_alvarez.webp 960w,
+/static/de5985cfc1c2500721d616f59bf49901/40d4c/romi_alvarez.webp 1246w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/de5985cfc1c2500721d616f59bf49901/0783d/romi_alvarez.png 240w,
+/static/de5985cfc1c2500721d616f59bf49901/782f4/romi_alvarez.png 480w,
+/static/de5985cfc1c2500721d616f59bf49901/f570d/romi_alvarez.png 960w,
+/static/de5985cfc1c2500721d616f59bf49901/9e57d/romi_alvarez.png 1246w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/de5985cfc1c2500721d616f59bf49901/f570d/romi_alvarez.png&quot;
+          alt=&quot;romi alvarez&quot;
+          title=&quot;romi alvarez&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9fb96e9dd40e347495c89dd1e873ad05/67148/diamante.carbon.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 99.19871794871794%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAABYlAAAWJQFJUiTwAAAEJUlEQVQ4y1VVS28bVRQesWPLAqHu+CGAqKjKArFDlCpdsAAk1EWFKmhZUBGR0qhAFQKtsOoqD6VBTaWmNAnBTkzi+Dn2jMfjeXkeftvjpGlo4Qd8nHP9iLK4vvY997y+7zvXUiXowO0cwKt14Ng1GE4dJu9+G0ate2LxXV7iO9l1r0m/2ydskly28cfaBmKrj5GKJ5DJqlAKOgWkBPUO/HoLrV4I3a1jr1hBiRPWe/CaPfwyewsr0RmYfhM7sgaVCpEKuoWJ8+dx5vQZ/BqJIqs7yFASg5wsvwHPD9DrhyhZHv5K5lA0fdjNPqyqh+mpSSzN3RWJZcODTlVLasXC44fLePf0O7j27XVUO09hcPnUhhO0UK/X0e11RRXsxC1azX2UKwaePPodufQOvFZIBYSidSlftrDycAUTEx/jh5k7cFr70NymwMOutxE0Wqg12zApuE5nuteCTXcyRRWb8RiSySRU0xvYuEKNssqqCae9L4BW7ACqUxMtq2UHacKzSNgwPooViGSMYUExkCG/jGYjRzBlCaZStQHJoIsVqwaNWaPFl3lxyxadm1SR0eiNz0eMsiKcRkjt908oQbJafQThIYLeU1TbfWiUhatgY5kc+XuZFwXW3AYlbQlbgapl1nN6VRTCdhHQoAs2OVRJJjpJgpnMUhvV9gHWYjtYWryPrfgGUjkF8ZSMtGpQ8iOc++xTvHLqVbx19izSJYtseRQtH1I8VcL1n+YwdfMeIguriFHAPGV1u4dYfrCKyM8z2PpzDdmChhRhxk42sfzN9CQ+/OB9vPHm28hXXIEhdyPp9FHSbSglAwrtXDqTw6QUibC8ZkFzAiElxotxZEZdErZb70ImhvnMHtokdnRIRy5hadEFZmo0Xjr9ZrI4M5/zlPDONpUSK05DyIjtrAwuRtLKVeRkHSpdVIcOowo1wiYngHcIBkcIWxsGVOQyZIKmNCSRdxHQdFtCGnpwLBshDX4siCiXROyFR9TFwbGkWPRMZDOkVsPBeWM4KTwyNl1uHPyLWv85Cbs2Dpwh/OLJAlY3trFHpIwkZJJj0evi77KHrDlodeQnyURGYncbmcQ6ipldxNMF8QD44TNEfpvHV59P4/KFj/Djje+wW6D2iU2udn5xGVeuXsHXk99jfWsPiayCAhEk5WUF6/EnWJibxaPFKJKEGRuC/hFu3JzFufcu4OInF3Hpi8sDrPj5ova2Y5t4MH8Xt+9EkKAixrPMxmr7EF7vOZzOM4EPt8ABr03dwmunXof00su49OVVNA//G8iKR69DPv0XqBFU/FiMR0+jCzK1WDBcatUTTLMT6yqWURBdWsHt6AI2dzLibPRCl+i1ZpHLlaoYydGMSxUasxK1WXQGLwrPKsumQqS4NAE+7X7/n2GwzrgSSzGhs2RYIf7x38D/lYdPxCqj+zgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/9fb96e9dd40e347495c89dd1e873ad05/01472/diamante.carbon.webp 240w,
+/static/9fb96e9dd40e347495c89dd1e873ad05/222bd/diamante.carbon.webp 480w,
+/static/9fb96e9dd40e347495c89dd1e873ad05/620b9/diamante.carbon.webp 960w,
+/static/9fb96e9dd40e347495c89dd1e873ad05/1cb16/diamante.carbon.webp 1248w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/9fb96e9dd40e347495c89dd1e873ad05/0783d/diamante.carbon.png 240w,
+/static/9fb96e9dd40e347495c89dd1e873ad05/782f4/diamante.carbon.png 480w,
+/static/9fb96e9dd40e347495c89dd1e873ad05/f570d/diamante.carbon.png 960w,
+/static/9fb96e9dd40e347495c89dd1e873ad05/67148/diamante.carbon.png 1248w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/9fb96e9dd40e347495c89dd1e873ad05/f570d/diamante.carbon.png&quot;
+          alt=&quot;diamante carbon&quot;
+          title=&quot;diamante carbon&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c0357ea97c7def57e578c567d667f2cc/360ea/nicopereiro.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 99.34426229508196%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAABYlAAAWJQFJUiTwAAAEW0lEQVQ4y01UW29UVRQ+f8GIMSEafSHxkvhikCAkGMRoSJNGSYmYABVCmliCD76oIcZGgiVNa3qBqb3QSqwWbEW0UCkFpp3OnLmc+5wzc2bmXObSmU5La0rw/XPtPT2Vh505s9de3177+761BNl0ERXT0KI61LgG3cjByJdgFVcg6zbiD2NYmA0jIVvQnTI0ipl+FbpVxNKigsWICT2/DCXrQc0VISzcmkXnp+3oO9WG8I0beJjUEZPTcFc3MXR5BF8efh+zJw/j7vAQ7ktpLCY1OPUNjIf+xOljp3DmxHEsJS3MR5NImQUIVy4PYe9rb6D50Af4ZXIKab/Gb3PqmxgNhfB50150t+zD1EgImluDnHE5YKjvNzQdbMWRplaISpZXZ7pVCHqhzP9o+TLS7jIyxTpMr8qXYvsQ9Ryiqg2FzmSIBh6jJytGFbHFMqTUCgcKYoLuVOiwT6A+AXiQqTqD9ljQoMUusehXL5T4N1sMQPeIT5fyCh7P0+hCVpygE9lx4i1h5pEwbKSsQgOQbjSUDBdGpkoZDduAxRo04jPOFonIuGOv1EkwwaJku7wKu7LGnxuUzhJzpTp8Esdfe4z88qNtKjg13gpylQ3K2+A5bFnEv2BSMK5lIcomv0Ui0ln57JK7iwkMjk9gYOQaZu4v8X1GjeWvIGmoeBC5h6gUoX0XSV6lD0GSdHzf3obxr84hGRMxF5MgahkU15/g6/Pf4oUdz+H1l19EV1cPwmQZUbOQrWxibq4X3Rd3Y7S3BSkthblICjHVgjA4fA3vvX0Ao4P9UDNZrjbjIl9dx0+/TuP8NxcwMjgAWVWhFZixiyjUNhEa7MKJo7vwYfMezMcSyJZWG6KMDV/FgT378ePNWcQJyC7Vt3nK0neOuLW2eGUcMcGc2j8YGA3h6Ml38MlnR7Agq8iV13iOkErbCEcTiBCHkuVwlRs81bj3kqQ+U/FpazBwjWzEfKra/v8xpnJazZJJ82QNjwRxkEzn+SFWlU62SBEvzFLMNgzMYIAU01IGkgqLFXj3MDD+ZMutwHLLyJRWOA+B/IGhue/8OleW7Qd02FuWcmobfJ/FeaeozipU/wk9zSMFG9YJOkUngXwSJ+9kYeQc6iKfxzIE9iCqYGh8ElO37/GzjC5e4UxYwsisibYvOtBPw2CJnsHkz1C1UTGGKz2d+KHjLMR4hNRUIFLMI6N3fncJrz67E8ePtRI9Nfy9IHIuhbGJEFo+3o03972C/uFh4sqnYUBJq4/R09eLnc8/g10v7cDE9ev0rDpxnENp41+0nz0HQRDw7sFD1EXrJKbTUPnnv66i+fRb+OjMftycvwWnuknPKnPLzEclTP5xB9O3Z6jPM9Q9DWuwNv39zjw6LnVjbHKacx/wKyQsF2HJQIw6QLbdxkQOpgyBsmQGpBcqjZkXeJT2PRIlX3m07QAOaNNEsVi5Xo1v8gCbKkxtsoZG00alS7QtWwQxM6FDeSoWCPkfPsgseH3WWeUAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/c0357ea97c7def57e578c567d667f2cc/01472/nicopereiro.webp 240w,
+/static/c0357ea97c7def57e578c567d667f2cc/222bd/nicopereiro.webp 480w,
+/static/c0357ea97c7def57e578c567d667f2cc/620b9/nicopereiro.webp 960w,
+/static/c0357ea97c7def57e578c567d667f2cc/47cd5/nicopereiro.webp 1220w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/c0357ea97c7def57e578c567d667f2cc/0783d/nicopereiro.png 240w,
+/static/c0357ea97c7def57e578c567d667f2cc/782f4/nicopereiro.png 480w,
+/static/c0357ea97c7def57e578c567d667f2cc/f570d/nicopereiro.png 960w,
+/static/c0357ea97c7def57e578c567d667f2cc/360ea/nicopereiro.png 1220w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/c0357ea97c7def57e578c567d667f2cc/f570d/nicopereiro.png&quot;
+          alt=&quot;nicopereiro&quot;
+          title=&quot;nicopereiro&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;técnica-3&quot;&gt;&lt;a href=&quot;#t%C3%A9cnica-3&quot; aria-label=&quot;técnica 3 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Técnica 3&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Elijo una imagen al azar de una cuenta de instagram y obtengo descripciones cortas automáticas de cada una de ellas a través de un algoritmo.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Luego paso otro algoritmo que dada una frase corta genera un texto ampliado.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;En cada caso presento la imagen original, la descripción autogenerada y el texto ampliado.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;tengo-miedo-nene&quot;&gt;&lt;a href=&quot;#tengo-miedo-nene&quot; aria-label=&quot;tengo miedo nene permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Tengo miedo nene!&lt;/h4&gt;
+&lt;p&gt;Como podemos imaginar, las primeras etapas de esta técnica son similares a las anteriores. Con un script elijo imágenes
+de cuentas de Instagram y las paso por el algoritmo de descripción automática.&lt;/p&gt;
+&lt;p&gt;La variante en este caso es que, como en este caso no importaba que yo accediera a pasos intermedios, pude usar un servicio online
+simple y poderoso para producir el texto largo a partir de la descripción. Para eso me apoyé en &lt;a href=&quot;https://talktotransformer.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Talk to Transformer&lt;/a&gt;
+que usa el modelo &lt;code class=&quot;language-text&quot;&gt;GPT-2&lt;/code&gt; para completar textos a partir de un comienzo. Entonces agarré los textos generados por &lt;code class=&quot;language-text&quot;&gt;im2txt&lt;/code&gt;
+y los pasé por este sitio y los resultados, como pueden ver a continuación son super interesantes:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 766px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/602f5091dae77a4036eb68890fbbc3ef/c49b8/brunotortolano.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 163.70757180156656%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAhCAYAAADZPosTAAAACXBIWXMAABYlAAAWJQFJUiTwAAAFZklEQVRIx31U+W+UVRTtf0JIgJZOp6WFFkrRLiKLKIvRNBETTEARivoDYsCgUG2MhkYkoQYMLk0RobbQ0iltmZkus3Rm2tnnm6VD7UZLASEa/4HjPW+WzrSjP9zc97333XPPvee+l6c9mEM4OoVwbBqT888wufgXHoiPP/kbsaf/YELWaVt4rnx07inCM4vQphfFP4Y2KzbzCKE/5pEXCcYRdwUQdfjQca4Jv58+C8PHZ9B1vgmGliswGPpwt7cPXeK7b3eh624PzMN2uP1heINReMaD8Dm8CAYmFGheaGoBobkn0OKzOFG1DftXrcLZggKcWrMW7+TnY0fdS6jftxef17+JL94+iLMH30LL6TNwDFvF7LD3D2LcYETI5oE291gAhaY2/QialH1ix068VqTH6cqtqC/biBJ9CTavL0RlYRFOSrKvdr+CD7dW4cvX38C4cRhjJgucPUYMff8LrN1GRBaeJQDDAugTwP21dfi0uBiNm7egVIA3im0v2YBy8fvEN5SWoU6nR31NHey9Jljbe2Fpu4P2zy7AfG8IsYU/lwC9AlhTXYs9hYU4JIFVwo6gxTQBKRP/ooBWCdt90gandRQOkxUjnf34tekSLEYrovMZgB4BrKuphT6/AJv1xajQ61GiK4JejL5IrLJYksj5dqnE4/HA5XTDeKsH3Zd/gs06hohokQW4tboG60SIDYpVAoSm0+mUJ+MCOa+VxP6AH267C+ZbBrS3tMFsdiD68Gl2Dw/XbcchCTxSWooKCS5NAtOqWbIw3yQMd5Gh1wtXnxn912/j5nfX4LS5lxhS5YAAXt+1Gz8K2GHpYaUAvCAAFIT2sqz3SMmviuqH2EObA6YOA4xtnbh5rhkDd/pFlGdLgKHYFJp37lJjUy7N3ybB1VRYfMWGMmwpK0elfFcU6rBfAIfumXC3tQMjHX34rfFbdN7oQnzxefYcvs/BXr0aB9bl48DaddgrVi1WtUb8eh0OiNrlMvi7N1Wg9ZsWtJ6/iK4r1/HDqUa0ZwKyh/6JGVw9+QluvHsU3cdPoPNYA1qPHsfl947hkuw1i29r+ABfHzmKxoaPcO3CFbQ3X0VnSyt+brqIgQELYvMiiiZXTxNQXsGIXPLI7BOExaeMezFpdlR8SB6CCVnTIskzPhLKTycfBwKqsgmcNB5mfmvJ73DyO5SMWW48y0st6P3xGbFZuMOTqgVBedp88qzxm563ifMakH+0HKBZgAEJtowHMOzyocc4AvOoG2b7OEy2MQyOeuAIRGH1hNT5mBZPl5hVyXJAMrFJEAOcwRiGnF6MheKqhwSILOvXcjAFmNXDZBADFEAyODj5MGfPcpacLcpS1sze5mKiTT1asadUzgwkE4pCS61DGXsJ4VJnM8qn/8ulMkUxiRAjY35Y3UHctzhVH0d9YRHDD5tXU/t2b1iJNiL/22XPIns5AQlEIzD9oMMjPqBAKBbBuR4UMCbmmsBWd2glIKnzgCApIIKQ3X2rS42LKzihQHlOz8RGGSsy5JSsYMgfmXHY6VMMWZpRwMiERlBaAiyokjGpV16q9NXLZEgQBqTK5iCn2sBADvmQJLUkwdk/VuKUoc/Zw1Qpqk+yphBsA/cIyPXAiEMl6x20KoY8I5mcY8MyEiqzf1qWEHYJJtNU71QFksCRZJeyvMzBTd1fs92d7hcZ9Q2PpsFpFIKe50z8nwz5AzOrEr0JhqkHg2u7msNQmumoL6IY8mVaIQqNfRuQYSbTfmFGAKpstCWUHhL11T9yRlAOPoVi0pwMl8oIpectMZOJm5NSnK+SKzSh2HG0eOYTlitU5pNF4wCrEkUIPmUOf1SNBpnwOfu/1+Zf3pUQ/+Fw/vkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/602f5091dae77a4036eb68890fbbc3ef/01472/brunotortolano.webp 240w,
+/static/602f5091dae77a4036eb68890fbbc3ef/222bd/brunotortolano.webp 480w,
+/static/602f5091dae77a4036eb68890fbbc3ef/0c929/brunotortolano.webp 766w&quot;
+          sizes=&quot;(max-width: 766px) 100vw, 766px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/602f5091dae77a4036eb68890fbbc3ef/0783d/brunotortolano.png 240w,
+/static/602f5091dae77a4036eb68890fbbc3ef/782f4/brunotortolano.png 480w,
+/static/602f5091dae77a4036eb68890fbbc3ef/c49b8/brunotortolano.png 766w&quot;
+          sizes=&quot;(max-width: 766px) 100vw, 766px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/602f5091dae77a4036eb68890fbbc3ef/c49b8/brunotortolano.png&quot;
+          alt=&quot;brunotortolano&quot;
+          title=&quot;brunotortolano&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 914px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7c15d3e0dd1ff2aee138e3350fa99fbb/7d205/anitabagg.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 122.75711159737419%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAYAAAAxFw7TAAAACXBIWXMAABYlAAAWJQFJUiTwAAADSUlEQVQ4y5VUW08TQRTu7/HBFxN98REfDDExJiZGjSQ+oMaEGNQo0WBiDKiY+IAkEhWNPgiJRGJ8MBDKtd1edrfbbrctvVBKS1soCFRA6MXPOdNuqVDY2uTrnJkze84335wzJr/sw4xTRUANwhtNQptdqMBbQaIyVyOJqvX9MKlaGMlYEsWNTezkC8iVUbELRYY/2M4VMDOfhscooMI2pFazoF+hUCghn0exWESeBdv+vYVCbhP53A6C8UV4wgYB3aE4ksuryKQzUBUVTrsTIsO3/k8Y/NgN8+f7GOhqhDjSg9l0Fu7QvHHA1PIa4rEFKJIbE6NmWKYEdLc/QP/LZgy/uYC+hyfgmexFJLVeX8AkC5hMpGC3CBAYrCODeNd2DvduP0bbrSZ0XD8C89cXiC7WwzAcR2LpJ4I+DaLNBsnuwND7DrRePIkr5y+hrXMA1y434ktfO2KZDRYwZhxwgQXUZDscFiuePO/DqTNXcfL4UTSdPYa7j96ioeE0ujtvIrGyBSVoGDCBeHoZEZ8LbknC064eNN9oQfudJvS+eobeD9/R2tKMoYHXiC3VoaHCNEyvrKOeX5Dq0KhsPOzI0WQGq9lNrKxvYHntV01k1rLwz6WMO4X+qPpJSyNQMB16G+5NYNIXNOpjjiq7vF6LyUFMTfSB5IvA6tIgKH5My15m+2BzB7g9JXq47WCPB42C4sO05OWJajIkh1ML8Q9p44TDjTFBhoUloBtVgnN89ITn+ehmZaOXzqFH/l9U61mtaQ0NS/DumR+GfbdMRxCZjiJ7G0lPpzcE2T9bWmOQ/BEuC7fLftqr+0kKnalJY7VFQg9P2ph2EtdyzCZj3O7CpJO9Pg6FY9yujy5um9le3TclqpAD0X9vmRYFt58zkRg7J2Pg8AY5U1qjOWfK2HGW5Gc3Tz76jvZVApKDMhOzUYuTMyOmxGJaUsuMFW6Tn5LTHprb1RlYZI0nqWhIdG0sC9UZgdehJ1ACzZXSXKjaQ7ZY1pNY6pdr8jENqah/TFh5VmKjjwRiQbVJRa5rSszpRDp7mu8yJA2ZNjp90o1nLd8kZacTiL4w95O+1XWnlws9MpUjk4N3QajUBQTqiFKnxMq+3a45qJdp7S+82c20HYwRKAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/7c15d3e0dd1ff2aee138e3350fa99fbb/01472/anitabagg.webp 240w,
+/static/7c15d3e0dd1ff2aee138e3350fa99fbb/222bd/anitabagg.webp 480w,
+/static/7c15d3e0dd1ff2aee138e3350fa99fbb/6e3e2/anitabagg.webp 914w&quot;
+          sizes=&quot;(max-width: 914px) 100vw, 914px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/7c15d3e0dd1ff2aee138e3350fa99fbb/0783d/anitabagg.png 240w,
+/static/7c15d3e0dd1ff2aee138e3350fa99fbb/782f4/anitabagg.png 480w,
+/static/7c15d3e0dd1ff2aee138e3350fa99fbb/7d205/anitabagg.png 914w&quot;
+          sizes=&quot;(max-width: 914px) 100vw, 914px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/7c15d3e0dd1ff2aee138e3350fa99fbb/7d205/anitabagg.png&quot;
+          alt=&quot;anitabagg&quot;
+          title=&quot;anitabagg&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 934px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/641aec5afa8e30652a9ffc4b985ce099/37df5/gabo.pic.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 123.55460385438973%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAYAAAAxFw7TAAAACXBIWXMAABYlAAAWJQFJUiTwAAADZklEQVQ4y41V2U5TURTld3gwEKVSUEqBEGIoCMQXExInggiKxAiaWIfogzFIHJ4wRCACIoMyBEHUIHMLpZT2trd0hBYoBAhofDAx6PLs017bUqCQrOx7bvdZZ+21z77EWGyLsM5ZYbU4YXV4YVlchbjgg0XCoj+a3SsQXMs87n4ORYxgdcMlutHT2YeL50pQVHoTl0orUXT1Fi5X3ENxuRrnSyoxOW3Ar987MDmX9iXjhEaW4Fz/gbrmdsTGxuFoggIJyZk4lpwFeWouElOyEXc8E8MjE6C/6ISsTNfqFupb2hEXL4MsUQm5IhupGTlIVuZClpSBOFk6hoYPSWhihE5G+Ka1E+knU5CvUqG8rBB1T8/iduUZFOTkIi87C1rN5OEIBZZgXdrE0JdBNDwsRkd1FervqtHZ8Ahm7R3ohmox2lODTZ8DfxihmZFFJRS9G5gY/ormmhvIP5WD69dU6G6rgL5aBVtLETSDtdhcdR2S0LUEs2cd+qlxvLhfhkxlGl6rT2CqSYmXhQp0qS/AMtGI7Q0vdv4eklD0rmN0fAT1z6rw/EEZChRJuHI6HU2v1GhrfIL2+sdY9ti5QiEaITXFsbqN5rfvkCU/grz0RKhSjzHI2LMcuWlyZCbFQzs2HGiKN5rCZTYNa5iaMeDj+1b0935AX1cHBlj8PNCLT/096O/rht3pxtrWz+gKpTESPWuw+77D5tticZtH20oQgtuHOVZN9NEL/ECRyjc6PDDaPcFnBirT7A7mRS+ZDb+ezfTYjIBv2lmM6oyYmDVj0mDha53ZwXMkMmEfsjCFs/ML0BitjMiCacEOrWmeY5wRz4jOMHUHISbUD5E+XQykhseQ9UFlRijcCzSzEiJ+3+udpNB/so+V7Oa+adjHlkrViy7o2EeXvJ1hkSyh0mlNmDbb+XudxcEt0ltdoYQrvJvTzPwpk81PwDZRMyiZIpERCc8RbDAGrtA+Cld4aXQabdYa5/kmUmpg/yLo2hgd4dhtRUSXKYGU8e4yQs2cyNWSKiInpbSWnskaCfSe7NlDoTOokDYHQGvuGfOVvKIcfcAS2kN2UCSOsEmh07mHAfMNtgUY5v2gpkRcp8CVkhBRMhHSdPg7GlRD3kqK6DBqGOXSQbsbE6Yw/A76jQ9twv97GXI/d8/3Px3nlqoVm5pwAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/641aec5afa8e30652a9ffc4b985ce099/01472/gabo.pic.webp 240w,
+/static/641aec5afa8e30652a9ffc4b985ce099/222bd/gabo.pic.webp 480w,
+/static/641aec5afa8e30652a9ffc4b985ce099/88158/gabo.pic.webp 934w&quot;
+          sizes=&quot;(max-width: 934px) 100vw, 934px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/641aec5afa8e30652a9ffc4b985ce099/0783d/gabo.pic.png 240w,
+/static/641aec5afa8e30652a9ffc4b985ce099/782f4/gabo.pic.png 480w,
+/static/641aec5afa8e30652a9ffc4b985ce099/37df5/gabo.pic.png 934w&quot;
+          sizes=&quot;(max-width: 934px) 100vw, 934px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/641aec5afa8e30652a9ffc4b985ce099/37df5/gabo.pic.png&quot;
+          alt=&quot;gabo pic&quot;
+          title=&quot;gabo pic&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a2c981582d8d54691aac98111d2fafa6/8fcfd/danzajdband.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 97.02048417132217%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAABYlAAAWJQFJUiTwAAAC8klEQVQ4y4VUS08TURTmVxgTd8ZENMYICQs1xkQSkYeABTTCBhMXEhNMjNGVKzYujCQS0BgeBhWUgCJGEQQKlD6m7Uxf05nptAXK0wfhL3yec9tBaIssvpxzz5373e+exxRoEROGEoXhV6GHYwjGV6AYy9CWNhBb+QVteRPRxXVEkmsC7Ks7SMfYWrEC1VxBNLYM1ViCQZuTThkORUcozr5CvoaQmUKQEIilhC+RiHlZFTE1c9kOYYQDpIYtq7H7Ing1OIqHbe3o/zQBRV8kLInDQbo8SJdLahw/XDK8ZKN8djehygtCOLGK+PoWBsfGcebseZTXN6Gj7wPiq7/hDhlYCGjwEUEkvipiISKe94WFiL2EGSdMuUtsbqN3YBgnThehtLoOz3vewR9NQAobAp5IDAoRsdKAkYIroOdRmEXY83YIp4pLUHLhIpput+DbnAfuoI4Zt4L+4S9of/EaI+N29Lz/LJT/X+HGNvoGR3Ds+EkcLSzE/cdtouIKFeNpRzeKi87B1tCMO3cfoKysBqMTczDX/oh05RCGiDBJCrvfDOHQ4SMoq6Env+xFZ1c3BobH8ORZJyou16D13iO0tLSi9FIFPn6dFnnPS8hBkzaHxr6jvMqGG43NsNXfRPW166ikfFZctaGqtgFXKmtRXdeI+sZbmHB4YVCv5iW0+omTzB9pqZ8COvkGVTVG4Dhbfqa5tpVTkD2E1oY1ERZEjBRwSsIZa2H3mbyEfKOXpsBOFV2QI5iVgph2+eGk0ZRoLL2qKSruoeqKnjyIkC1PAveeQqMoa0lx0BqxbGS/hpE3h9xbu8Ex3meb7afX/+I5Cnn4ZT0JP6mTaY5ly2ZirJ7Xfi0hwL5ipNd7FFrq+Ikzblnkzu5RMOcNijX7ApRfzu2sFMDUgncnLtFY7lsUJmA4/GFMOiRMOX3pSzLWIrHiDC4Yn88h5JtYlYv+LlxRp6LSzOpizdX20E/CFYiK77javMcdwanZtw+zk34QuHDW2b+2Kv5757v3pwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/a2c981582d8d54691aac98111d2fafa6/01472/danzajdband.webp 240w,
+/static/a2c981582d8d54691aac98111d2fafa6/222bd/danzajdband.webp 480w,
+/static/a2c981582d8d54691aac98111d2fafa6/620b9/danzajdband.webp 960w,
+/static/a2c981582d8d54691aac98111d2fafa6/093d1/danzajdband.webp 1074w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/a2c981582d8d54691aac98111d2fafa6/0783d/danzajdband.png 240w,
+/static/a2c981582d8d54691aac98111d2fafa6/782f4/danzajdband.png 480w,
+/static/a2c981582d8d54691aac98111d2fafa6/f570d/danzajdband.png 960w,
+/static/a2c981582d8d54691aac98111d2fafa6/8fcfd/danzajdband.png 1074w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/a2c981582d8d54691aac98111d2fafa6/f570d/danzajdband.png&quot;
+          alt=&quot;danzajdband&quot;
+          title=&quot;danzajdband&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;no-tan-rápido&quot;&gt;&lt;a href=&quot;#no-tan-r%C3%A1pido&quot; aria-label=&quot;no tan rápido permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;No tan rápido&lt;/h3&gt;
+&lt;p&gt;Esta fue simplemente la primera entrega de esta serie de ejercicios que estamos haciendo en la
+&lt;a href=&quot;https://instagram.com/escuela.relacional&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Escuela Relacional&lt;/a&gt; ❤️. Mis agradecimientos a
+la gente hermosa que la compone y me permite ser parte de esto.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Nowhere to SSH: my journey into the Serverless world]]></title><description><![CDATA[I migrated a small real-world app from Express + MongoDB to Now + Firebase. I'm happy I was able to do it in ~10 hours and I don&#8217;t need to maintain or spend money on servers (at least for now).]]></description><link>https://zajdband.com/nowhere-to-ssh-my-journey-into-the-serverless-world/</link><guid isPermaLink="false">https://zajdband.com/nowhere-to-ssh-my-journey-into-the-serverless-world/</guid><pubDate>Wed, 09 Oct 2019 21:23:35 GMT</pubDate><content:encoded>&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
   &lt;p&gt;
     tl;dr: I migrated a small real-world app from Express + MongoDB to Now + Firebase. I&amp;#8217;m happy I was able to do it in ~10 hours and I don&amp;#8217;t need to maintain or spend money on servers (at least for now).
   &lt;/p&gt;
