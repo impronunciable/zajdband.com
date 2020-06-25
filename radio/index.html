@@ -42,9 +42,11 @@
       current = current || defaultRadio
 
       if (current.src !== audio.src) {
+	var playing = !audio.paused
         title.textContent = current.title
 	document.title = current.title
         audio.src = current.src
+	if (playing) audio.play()
       }
     }
 
