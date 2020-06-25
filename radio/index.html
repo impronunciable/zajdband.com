@@ -17,6 +17,15 @@
     var title = document.getElementById('title')
     var audio = document.getElementById('audio')
 
+
+    function currentHours() {
+      var d = new Date();
+      var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+      var nd = new Date(utc + (3600000*(-3)));
+      return nd.getHours();
+    }
+
+
     function selectSource() {
       var defaultRadio = { src: 'https://lfhh.radioca.st/stream', title: 'LoFi' }
       var schedule = [
@@ -25,7 +34,7 @@
         { from: 16, to: 20, src: 'https://futurock.fm/videos/rosemberg/libro2.mp4', title: 'Futurock' }
       ]
       
-      var hour = (new Date()).getHours()
+      var hour = currentHours()
       var current = schedule.find(function(show) {
         return show.from <= hour && show.to > hour
       })
