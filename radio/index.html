@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title"></h1>
+  <audio id="audio" controls></audio>
+  <script>
+    var title = document.getElementById('title')
+    var audio = document.getElementById('audio')
+
+    function selectSource() {
+      var defaultRadio = { src: 'https://lfhh.radioca.st/stream', title: 'LoFi' }
+      var schedule = [
+        { from: 9, to: 11, src: 'https://cdn2.instream.audio/:9243/stream?_=172ebddd6f0', title: 'Congo' },
+        { from: 11, to: 13, src: 'http://sa.mp3.icecast.magma.edge-access.net:7200/sc_rad39', title: 'Nacional Rock' },
+        { from: 16, to: 20, src: 'https://futurock.fm/videos/rosemberg/libro2.mp4', title: 'Futurock' }
+      ]
+      
+      var hour = (new Date()).getHours()
+      var current = schedule.find(function(show) {
+        return show.from <= hour && show.to > hour
+      })
+
+      current = current || defaultRadio
+
+      if (current.src !== audio.src) {
+        title.textContent = current.title
+        audio.src = current.src
+      }
+    }
+
+    selectSource()
+
+    setInterval(selectSource, 1000 * 60)
+  </script>
+</body>
+</html>
