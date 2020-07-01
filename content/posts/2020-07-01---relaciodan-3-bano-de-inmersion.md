@@ -1,7 +1,5 @@
 ---
-description: "La primera parte de la consigna, elegir un objeto que nos represente, puede parecer una pregunta de entrevista de trabajo
-cual `Qué animal serías?`. Sin embargo, tomarnos un tiempo para pensar en esto puede ayudarnos a entender un poco más
-sobre nosotros mismos."
+description: "La primera parte de la consigna fue quizás la más complicada: Elegir un espacio de la casa y escribir al respecto."
 socialImage: "/photo.jpg"
 title: 'Relaciodan #3: Baño de inmersión'
 date: "2020-07-01T13:23:35-05:00"
