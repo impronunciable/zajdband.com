@@ -61,6 +61,26 @@ recurso poco ortodoxo:
 
 [Ver en pantalla completa](https://zajdband.com/🛀/)
 
+Para quien le interese, el código HTML para crear esta escena es exactamente el siguiente (pueden ir a ver el código fuente en el link de arriba si no me creen):
+
+```html
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="sky" src="sky.jpeg" />
+      </a-assets>
+      <a-sky src="#sky"></a-sky>
+    </a-scene>
+  </body>
+</html>
+```
+
+dónde `sky.jpeg` es la imagen dibujada del paso anterior.
+
 ## Volver
 
 Apróximadamente una semana después de esto nos pidieron volver a escribir sobre el espacio que elegimos. En mi caso después de pensar en como me gusta la bañadera y lo poco que la uso,
